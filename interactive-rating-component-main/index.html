@@ -4,19 +4,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link href="https://fonts.googleapis.com/css?family=Overpass:400,700&display=swap" rel="stylesheet">
+  
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    .body { 
+      background-color: hsl(216, 12%, 8%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card{ 
+       background: linear-gradient(180deg, hsl(213, 19%, 18%), hsl(210, 18%, 15%));;
+       height: 300px;
+       width: 300px;
+       border-radius: 10px;
+      justify-content: center;
+      align-items: center;
+     }
+
+     p{
+      color: white;
+      font-weight: 100;
+      font-size: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+      font-family: Overpass, sans-serif;
+     }
+
+     h3{
+      color: white;
+      font-weight: 700;
+      margin-left: 10%;
+      margin-right: 10%;
+      font-family: Overpass, sans-serif;
+     }
+
+     .send{
+      background-color: hsl(25, 97%, 53%);
+      width: 250px;
+      height: 30px;
+      font-weight: 100;
+      margin-left: 10%;
+      margin-right: 10%;
+      font-family: Overpass, sans-serif;
+      border-radius: 10px;
+      border-style: none;
+      cursor: pointer;
+     }
+
+     .rating{
+      background-color: hsl(213, 18%, 24%);
+      font-family: Overpass, sans-serif;
+      border-radius: 10px;
+      border-style: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      color: #fff;
+     }
+
+     .rating:hover{
+      background-color: hsl(25, 97%, 53%);
+      color: #000;
+      /*cursor: pointer;*/
+     }
+
+     .starIcon{
+       width: 15px;
+       height: 15px;
+     }
+
+     .icon{
+       display: flex;
+       margin-top: 20px;
+       margin-left: 10%;
+       justify-content: center;
+       align-items: center;
+       width: 30px;
+       height: 30px;
+       background-color: white;
+       border-radius: 20px;
+       background-color: hsl(213, 18%, 24%);
+       border-style: solid 1px #000;
+     }
+
+     .ratings-container{
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;;
+     }
   </style>
 </head>
-<body>
+<body class = "body">
 
-  <!-- Rating state start -->
+  <div class="card">
+    <form>
+      <div class="icon">
+        <img src="./images/icon-star.svg" class="starIcon" alt="star icon">
+      </div>
+      <h3>How did we do?</h3>
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+
+      <div class="ratings-container">
+        <button class="rating" value="off1" onclick="ativarBotao()">1</button>
+        <button class="rating" value="off2" onclick="ativarBotao()">2</button>
+        <button class="rating" value="off3" onclick="ativarBotao()">3</button>
+        <button class="rating" value="off4" onclick="ativarBotao()">4</button>
+        <button class="rating" value="off5" onclick="ativarBotao()">5</button>
+      </div>
+
+      <button class="send" type="submit">S U B M I T</button>
+    </form>
+
+  </div>
+
+<!--
+  //Rating state start 
 
   How did we do?
 
@@ -27,23 +141,26 @@
 
   Submit
 
-  <!-- Rating state end -->
+  // Rating state end
 
-  <!-- Thank you state start -->
+  // Thank you state start 
 
-  You selected <!-- Add rating here --> out of 5
+  You selected // Add rating here  out of 5
 
   Thank you!
 
   We appreciate you taking the time to give a rating. If you ever need more support, 
   don’t hesitate to get in touch!
 
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  // Thank you state end 
+-->
 </body>
+<script>
+    function ativarBotao(){
+        alert("Botão ativado!");
+        
+    }
+</script>
+
 </html>
+
